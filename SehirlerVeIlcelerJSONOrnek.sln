@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31911.196
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SehirlerVeIlcelerJSONOrnek", "SehirlerVeIlcelerJSONOrnek\SehirlerVeIlcelerJSONOrnek.csproj", "{F93C2360-45DC-4B65-AE69-6DC4AE466EB7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SehirlerVeIlcelerJSONOrnek", "SehirlerVeIlcelerJSONOrnek\SehirlerVeIlcelerJSONOrnek.csproj", "{F93C2360-45DC-4B65-AE69-6DC4AE466EB7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SehirlerVeIlcelerJSON_BLL", "SehirlerVeIlcelerJSON_BLL\SehirlerVeIlcelerJSON_BLL.csproj", "{2B750AA6-6436-4510-A253-AE18D48A715F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SehirlerVeIlcelerJSON_BLL", "SehirlerVeIlcelerJSON_BLL\SehirlerVeIlcelerJSON_BLL.csproj", "{2B750AA6-6436-4510-A253-AE18D48A715F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SehirlerVeIlcelerJSON_ENTITYMODELS", "SehirlerVeIlcelerJSON_ENTITYMODELS\SehirlerVeIlcelerJSON_ENTITYMODELS.csproj", "{8DF06CCB-A2A6-4C43-8F8D-3FD09275F930}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SehirlerVeIlcelerJSON_ENTITYMODELS", "SehirlerVeIlcelerJSON_ENTITYMODELS\SehirlerVeIlcelerJSON_ENTITYMODELS.csproj", "{8DF06CCB-A2A6-4C43-8F8D-3FD09275F930}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

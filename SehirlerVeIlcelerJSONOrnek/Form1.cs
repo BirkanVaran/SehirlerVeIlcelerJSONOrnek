@@ -17,6 +17,25 @@ namespace SehirlerVeIlcelerJSONOrnek
             InitializeComponent();
         }
 
+        private void SehirlerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void sehirSorgulaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            if (this.ActiveMdiChild != null)
+            {
+                this.ActiveMdiChild.Hide();
+            }
+
+            FormSehirSorgulama formSehirSorgulama = new FormSehirSorgulama();
+            formSehirSorgulama.MdiParent = this;
+            formSehirSorgulama.Show();
+            //Form içinde form boyutlarında göstermesi için ayarlama yap.
+            this.LayoutMdi(MdiLayout.TileVertical);
+
+        }
     }
-}
+    }
+

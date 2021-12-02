@@ -31,9 +31,10 @@ namespace SehirlerVeIlcelerJSONOrnek
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.SehirlerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sehirSorgulaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.IlcelerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.şehirSorgulaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.IlceSorgulaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.şehirSorgulaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,10 +53,18 @@ namespace SehirlerVeIlcelerJSONOrnek
             // SehirlerToolStripMenuItem
             // 
             this.SehirlerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.şehirSorgulaToolStripMenuItem});
+            this.sehirSorgulaToolStripMenuItem1});
             this.SehirlerToolStripMenuItem.Name = "SehirlerToolStripMenuItem";
             this.SehirlerToolStripMenuItem.Size = new System.Drawing.Size(73, 24);
             this.SehirlerToolStripMenuItem.Text = "Şehirler";
+            this.SehirlerToolStripMenuItem.Click += new System.EventHandler(this.SehirlerToolStripMenuItem_Click);
+            // 
+            // sehirSorgulaToolStripMenuItem1
+            // 
+            this.sehirSorgulaToolStripMenuItem1.Name = "sehirSorgulaToolStripMenuItem1";
+            this.sehirSorgulaToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.sehirSorgulaToolStripMenuItem1.Text = "Şehir Sorgula";
+            this.sehirSorgulaToolStripMenuItem1.Click += new System.EventHandler(this.sehirSorgulaToolStripMenuItem1_Click);
             // 
             // IlcelerToolStripMenuItem
             // 
@@ -65,17 +74,16 @@ namespace SehirlerVeIlcelerJSONOrnek
             this.IlcelerToolStripMenuItem.Size = new System.Drawing.Size(63, 24);
             this.IlcelerToolStripMenuItem.Text = "İlçeler";
             // 
-            // şehirSorgulaToolStripMenuItem
-            // 
-            this.şehirSorgulaToolStripMenuItem.Name = "şehirSorgulaToolStripMenuItem";
-            this.şehirSorgulaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.şehirSorgulaToolStripMenuItem.Text = "Şehir Sorgula";
-            // 
             // IlceSorgulaToolStripMenuItem
             // 
             this.IlceSorgulaToolStripMenuItem.Name = "IlceSorgulaToolStripMenuItem";
-            this.IlceSorgulaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.IlceSorgulaToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
             this.IlceSorgulaToolStripMenuItem.Text = "İlçe Sorgula";
+            // 
+            // şehirSorgulaToolStripMenuItem
+            // 
+            this.şehirSorgulaToolStripMenuItem.Name = "şehirSorgulaToolStripMenuItem";
+            this.şehirSorgulaToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
             // 
             // Form1
             // 
@@ -101,6 +109,7 @@ namespace SehirlerVeIlcelerJSONOrnek
         private System.Windows.Forms.ToolStripMenuItem IlcelerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem şehirSorgulaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem IlceSorgulaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sehirSorgulaToolStripMenuItem1;
     }
 }
 
