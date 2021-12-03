@@ -36,6 +36,20 @@ namespace SehirlerVeIlcelerJSONOrnek
             this.LayoutMdi(MdiLayout.TileVertical);
 
         }
+
+        private void IlceSorgulaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (this.ActiveMdiChild!=null)
+            {
+                this.ActiveMdiChild.Hide();
+            }
+
+            FormSehrinIlceleri frmIlce = new FormSehrinIlceleri();
+            frmIlce.MdiParent = this;
+            frmIlce.Show();
+            this.LayoutMdi(MdiLayout.TileVertical);
+
+        }
     }
     }
 

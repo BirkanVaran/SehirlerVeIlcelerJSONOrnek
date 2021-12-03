@@ -34,7 +34,7 @@ namespace SehirlerVeIlcelerJSONOrnek
             {
                 ListViewItem deger = new ListViewItem()
                 {
-                    Text=item.Isım,
+                    Text=item.Isim,
                     Tag=item
                 };
 
@@ -44,10 +44,46 @@ namespace SehirlerVeIlcelerJSONOrnek
                 deger.SubItems.Add(item.Web);
                 listView1.Items.Add(deger);
             }
+
+            groupBoxSehir.Visible = false;
+            // "Detay göster" şeklinde sağ tık menüsüne ihtiyacımız var.
+            // Bu kontrol ToolBox'ta ContexMenu olarak var. Istersek Designer ekranında form üzerine çekip yerleştirebiliriz.
+            // Fakat biz bunu Code ekranında yapacağız.
+
+            
         }
 
         private void btnSec_Click(object sender, EventArgs e)
         {
+            // ComboBox'ta hangi il varsa onun bilgilerini listView'de gösterelim.
+
+
+            /* Linq ile şart yazdık:
+             * Where ---> koşula göre bilgileri getirir.
+             * FirstorDefault ---> Where'den dönen liste elemanlarından sadece birini alır. */
+            Sehirler SecilenSehir = comboBoxSehirSecimi.SelectedItem as Sehirler;
+           SehirVeIlceBilgileri secilenSehirBilgisi = SehirVeIlceServisim.BilgileriGetir().Where(x => x.PlakaKodu == SecilenSehir.PlakaKodu).FirstOrDefault();
+
+            listView1.Items.Clear();
+            ListViewItem deger = new ListViewItem();
+
+            deger.Text = secilenSehirBilgisi.Isim;
+            deger.Tag = secilenSehirBilgisi;
+
+            deger.SubItems.Add(secilenSehirBilgisi.Tel);
+            deger.SubItems.Add(secilenSehirBilgisi.Faks);
+            deger.SubItems.Add(secilenSehirBilgisi.Mail);
+            deger.SubItems.Add(secilenSehirBilgisi.Web);
+            listView1.Items.Add(deger);
+        }
+
+        private void detaylarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            groupBoxSehir.Visible = true;
+
+            SehirVeIlceBilgileri secilenSehir = (SehirVeIlceBilgileri)listView1.FocusedItem.Tag;
+            richTextBoxSehir.Text = secilenSehir.Bilgi;
+
 
         }
     }

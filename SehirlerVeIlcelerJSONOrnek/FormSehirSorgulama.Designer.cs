@@ -29,6 +29,7 @@ namespace SehirlerVeIlcelerJSONOrnek
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblSehirAdi = new System.Windows.Forms.Label();
             this.comboBoxSehirSecimi = new System.Windows.Forms.ComboBox();
             this.btnSec = new System.Windows.Forms.Button();
@@ -38,6 +39,13 @@ namespace SehirlerVeIlcelerJSONOrnek
             this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader5 = new System.Windows.Forms.ColumnHeader();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.detaylarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblSehirBilgileri = new System.Windows.Forms.Label();
+            this.groupBoxSehir = new System.Windows.Forms.GroupBox();
+            this.richTextBoxSehir = new System.Windows.Forms.RichTextBox();
+            this.contextMenuStrip1.SuspendLayout();
+            this.groupBoxSehir.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblSehirAdi
@@ -76,11 +84,12 @@ namespace SehirlerVeIlcelerJSONOrnek
             this.columnHeader3,
             this.columnHeader4,
             this.columnHeader5});
+            this.listView1.ContextMenuStrip = this.contextMenuStrip1;
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(27, 63);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(492, 340);
+            this.listView1.Size = new System.Drawing.Size(492, 306);
             this.listView1.TabIndex = 3;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -108,6 +117,49 @@ namespace SehirlerVeIlcelerJSONOrnek
             this.columnHeader5.Text = "Web";
             this.columnHeader5.Width = 190;
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.detaylarToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(135, 28);
+            // 
+            // detaylarToolStripMenuItem
+            // 
+            this.detaylarToolStripMenuItem.Name = "detaylarToolStripMenuItem";
+            this.detaylarToolStripMenuItem.Size = new System.Drawing.Size(134, 24);
+            this.detaylarToolStripMenuItem.Text = "Detaylar";
+            this.detaylarToolStripMenuItem.Click += new System.EventHandler(this.detaylarToolStripMenuItem_Click);
+            // 
+            // lblSehirBilgileri
+            // 
+            this.lblSehirBilgileri.AutoSize = true;
+            this.lblSehirBilgileri.Location = new System.Drawing.Point(6, 23);
+            this.lblSehirBilgileri.Name = "lblSehirBilgileri";
+            this.lblSehirBilgileri.Size = new System.Drawing.Size(162, 20);
+            this.lblSehirBilgileri.TabIndex = 4;
+            this.lblSehirBilgileri.Text = "Şehir Hakkında Bilgiler:";
+            // 
+            // groupBoxSehir
+            // 
+            this.groupBoxSehir.Controls.Add(this.richTextBoxSehir);
+            this.groupBoxSehir.Controls.Add(this.lblSehirBilgileri);
+            this.groupBoxSehir.Location = new System.Drawing.Point(525, 29);
+            this.groupBoxSehir.Name = "groupBoxSehir";
+            this.groupBoxSehir.Size = new System.Drawing.Size(250, 340);
+            this.groupBoxSehir.TabIndex = 6;
+            this.groupBoxSehir.TabStop = false;
+            // 
+            // richTextBoxSehir
+            // 
+            this.richTextBoxSehir.Location = new System.Drawing.Point(7, 46);
+            this.richTextBoxSehir.Name = "richTextBoxSehir";
+            this.richTextBoxSehir.ReadOnly = true;
+            this.richTextBoxSehir.Size = new System.Drawing.Size(237, 288);
+            this.richTextBoxSehir.TabIndex = 5;
+            this.richTextBoxSehir.Text = "";
+            // 
             // FormSehirSorgulama
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -115,7 +167,8 @@ namespace SehirlerVeIlcelerJSONOrnek
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(788, 415);
+            this.ClientSize = new System.Drawing.Size(788, 383);
+            this.Controls.Add(this.groupBoxSehir);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.btnSec);
             this.Controls.Add(this.comboBoxSehirSecimi);
@@ -125,6 +178,9 @@ namespace SehirlerVeIlcelerJSONOrnek
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FormSehirSorgulama";
             this.Load += new System.EventHandler(this.FormSehirSorgulama_Load);
+            this.contextMenuStrip1.ResumeLayout(false);
+            this.groupBoxSehir.ResumeLayout(false);
+            this.groupBoxSehir.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -141,5 +197,10 @@ namespace SehirlerVeIlcelerJSONOrnek
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.Label lblSehirBilgileri;
+        private System.Windows.Forms.GroupBox groupBoxSehir;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem detaylarToolStripMenuItem;
+        private System.Windows.Forms.RichTextBox richTextBoxSehir;
     }
 }

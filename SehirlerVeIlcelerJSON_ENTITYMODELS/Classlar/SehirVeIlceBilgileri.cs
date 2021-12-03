@@ -9,7 +9,7 @@ namespace SehirlerVeIlcelerJSON_ENTITYMODELS.Classlar
     public class SehirVeIlceBilgileri
     {
         public byte PlakaKodu { get; set; }
-        public string Isım { get; set; }
+        public string Isim { get; set; }
         public string Tel { get; set; }
         public string Faks { get; set; }
         public string Mail { get; set; }

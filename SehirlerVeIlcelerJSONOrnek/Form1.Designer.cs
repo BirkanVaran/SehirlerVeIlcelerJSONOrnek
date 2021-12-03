@@ -62,7 +62,7 @@ namespace SehirlerVeIlcelerJSONOrnek
             // sehirSorgulaToolStripMenuItem1
             // 
             this.sehirSorgulaToolStripMenuItem1.Name = "sehirSorgulaToolStripMenuItem1";
-            this.sehirSorgulaToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.sehirSorgulaToolStripMenuItem1.Size = new System.Drawing.Size(180, 26);
             this.sehirSorgulaToolStripMenuItem1.Text = "Şehir Sorgula";
             this.sehirSorgulaToolStripMenuItem1.Click += new System.EventHandler(this.sehirSorgulaToolStripMenuItem1_Click);
             // 
@@ -77,8 +77,9 @@ namespace SehirlerVeIlcelerJSONOrnek
             // IlceSorgulaToolStripMenuItem
             // 
             this.IlceSorgulaToolStripMenuItem.Name = "IlceSorgulaToolStripMenuItem";
-            this.IlceSorgulaToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
+            this.IlceSorgulaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.IlceSorgulaToolStripMenuItem.Text = "İlçe Sorgula";
+            this.IlceSorgulaToolStripMenuItem.Click += new System.EventHandler(this.IlceSorgulaToolStripMenuItem_Click);
             // 
             // şehirSorgulaToolStripMenuItem
             // 
