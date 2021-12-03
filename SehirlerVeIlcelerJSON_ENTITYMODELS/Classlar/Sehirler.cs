@@ -8,8 +8,10 @@ namespace SehirlerVeIlcelerJSON_ENTITYMODELS.Classlar
 {
     public class Sehirler
     {
+        // C# Property kurallarına göre Şehirler isimli Class'ı oluşturduk.
+        // JSON Class deserialize olunca oradaki dataları Şehirler Class'ından türeteceğimiz nesneye aktaracağız.
         public string SehirAdi { get; set; }
-        public string PlakaKodu { get; set; }
+        public byte PlakaKodu { get; set; }
         public List<String> Ilceleri { get; set; }
 
     }

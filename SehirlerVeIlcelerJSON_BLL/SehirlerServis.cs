@@ -28,11 +28,26 @@ namespace SehirlerVeIlcelerJSON_BLL
             }
 
         }
+
+
         public List<Sehirler> SehirleriGetir()
         {
-            return JsonConvert.DeserializeObject<List<Sehirler>>(JSONString);
-        }
+            List<Sehirler> SehirListesi = new List<Sehirler>();
+            var jsonData = JsonConvert.DeserializeObject<List<SehirlerJSON>>(JSONString);
 
+            foreach (var item in jsonData)
+            {
+                SehirListesi.Add(
+                    new Sehirler()
+                    {
+                        SehirAdi = item.il,
+                        PlakaKodu = Convert.ToByte(item.plaka),
+                        Ilceleri = item.ilceleri
+
+                    });
+            }
+            return SehirListesi;
+        }
 
     }
 }

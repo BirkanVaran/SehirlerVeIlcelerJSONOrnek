@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace SehirlerVeIlcelerJSON_ENTITYMODELS.Classlar
 {
-    class SehirVeIlceBilgileri
+    public class SehirVeIlceBilgileri
     {
-        public string PlakaKodu { get; set; }
+        public byte PlakaKodu { get; set; }
         public string Isım { get; set; }
         public string Tel { get; set; }
         public string Faks { get; set; }

@@ -33,6 +33,11 @@ namespace SehirlerVeIlcelerJSONOrnek
             this.comboBoxSehirSecimi = new System.Windows.Forms.ComboBox();
             this.btnSec = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader5 = new System.Windows.Forms.ColumnHeader();
             this.SuspendLayout();
             // 
             // lblSehirAdi
@@ -61,28 +66,63 @@ namespace SehirlerVeIlcelerJSONOrnek
             this.btnSec.TabIndex = 2;
             this.btnSec.Text = "SEÇ";
             this.btnSec.UseVisualStyleBackColor = true;
+            this.btnSec.Click += new System.EventHandler(this.btnSec_Click);
             // 
             // listView1
             // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5});
+            this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(27, 63);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(492, 375);
+            this.listView1.Size = new System.Drawing.Size(492, 340);
             this.listView1.TabIndex = 3;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "İsim";
+            this.columnHeader1.Width = 75;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Telefon";
+            this.columnHeader2.Width = 100;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Faks";
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Mail";
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Web";
+            this.columnHeader5.Width = 190;
             // 
             // FormSehirSorgulama
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(818, 497);
+            this.ClientSize = new System.Drawing.Size(788, 415);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.btnSec);
             this.Controls.Add(this.comboBoxSehirSecimi);
             this.Controls.Add(this.lblSehirAdi);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormSehirSorgulama";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FormSehirSorgulama";
             this.Load += new System.EventHandler(this.FormSehirSorgulama_Load);
             this.ResumeLayout(false);
@@ -96,5 +136,10 @@ namespace SehirlerVeIlcelerJSONOrnek
         private System.Windows.Forms.ComboBox comboBoxSehirSecimi;
         private System.Windows.Forms.Button btnSec;
         private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
     }
 }
